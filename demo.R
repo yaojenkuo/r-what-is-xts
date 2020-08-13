@@ -1,8 +1,8 @@
-librar(quantmod)
+library(quantmod)
 
 # what is xts
 start_date <- "2018-01-01"
-getSymbols(Symbols = "AAPL", from = start_date) # create a AAPL xts object in global environment
+AAPL <- getSymbols(Symbols = "AAPL", from = start_date, auto.assign = FALSE) # create a AAPL xts object in global environment
 class(AAPL)
 # deconstruct xts
 xts_index <- index(AAPL)
